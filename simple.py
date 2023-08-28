@@ -1,12 +1,12 @@
 import serial
 import time
 
-DataBase = open('SGCami/Medicones-de-Vibraciones_Mesa-Optica/base de datos/bd1.txt', 'w')
-serialArduino= serial.Serial('COM3', 9600)
+DataBase = open('C:\Denis\ICE\VI SEM\Diseño 2 - ELEL210\Base-de-Datos_Mesa-Optica\prueba_acc.txt', 'w')
+Arduino = serial.Serial('COM3', 57600)
 time.sleep(1)
 
 while True:
-    CAD = serialArduino.readline().decode('ascii')
+    CAD = Arduino.readline().decode('ascii')
     print(CAD)
 
     DataBase.write(CAD)
